@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  sdb:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: trm_test
+    ports:
+      - 5432:5432
+    volumes:
+      - ./shelve_data:/var/lib/postgresql/data
+    networks:
+      - fullstack
+  backend:
+    image: shelve-backend-api
+    depends_on:
+      - sdb
+    ports:
+      - '8080:8080'
+    volumes:
+      - './log:/usr/app/log'
+    networks:
+      - fullstack
+
+networks:
+  fullstack:
+    driver: bridge

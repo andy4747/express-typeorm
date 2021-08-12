@@ -1,0 +1,4 @@
+node_modules/
+dist/
+rmvol.sh
+shelve_data/

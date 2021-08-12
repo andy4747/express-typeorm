@@ -1,0 +1,5 @@
+node_modules/
+.git/
+shelve_data/
+out/data/
+log/
