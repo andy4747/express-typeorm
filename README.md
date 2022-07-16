@@ -2,28 +2,76 @@
 
 A boilerplate project for express and typeorm
 
-## Prerequisites
+### Routing
+`
+Web Routes are located at routes/web.ts
+`
 
-- docker
-- node
+`
+API Routes are located at routes/api.ts
+`
 
-## Installation Guide
+### Views
+`
+All view related files are located at resources
+`
 
-- Building the docker image and running the container.
+`
+View assets are located at /resources/assets
+`
 
-```bash
-make start-api
-# server starts at http://localhost:8080
-```
+`
+Main views are located at /resources/views
+`
 
-- Stop the container
+`
+View partials are are located at /resources/views/partials
+`
+### Public assets
+`
+Public assets are located at /public
+`
 
-```bash
-make stop-api-soft
-```
+### Configs
+`
+All Configs are available at /config
+`
 
-- Stop the container and remove the dangling containers and images
+### Entities
 
-```bash
-make stop-api-hard
-```
+`
+All entities are located at /app/entites
+`
+
+### Controllers
+
+`
+Controllers are located at /app/http/controllers
+`
+
+### Middlewares
+
+`
+Middlewares are located at /app/http/middleware
+`
+
+### Uploading File using Multer
+`
+Use FileUpload from /app/http/services to upload files using multer 
+`
+
+`
+FileUpload() accepts 2 parameter (fieldName, limit) use it as middleware in routes
+`
+
+### Sending Emails
+
+`
+Use Mail.sendMail() from /app/http/services to send email
+`
+
+### Socket
+
+`
+Use socket from /app/http/services to use websocket server
+`

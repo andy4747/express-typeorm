@@ -2,7 +2,6 @@
 FROM node as builder
 WORKDIR /usr/app
 COPY package*.json ./
-COPY yarn.lock ./
 RUN yarn install
 COPY . .
 RUN yarn build
@@ -11,7 +10,6 @@ RUN yarn build
 FROM node
 WORKDIR /usr/app
 COPY package*.json ./
-COPY yarn.lock ./
 RUN yarn install --production
 COPY --from=builder /usr/app/dist ./dist
 COPY .env .

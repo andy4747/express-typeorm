@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /app
+Disallow: /config
+Disallow: /controllers
+Disallow: /keys
+Disallow: /cache
+Disallow: /sources
+Disallow: /api
+Disallow: /entities
+Disallow: /middleware
+Disallow: /routes
+Disallow: /admin
+Disallow: /admin-panel
+Disallow: /distribution
+Disallow: /dist
